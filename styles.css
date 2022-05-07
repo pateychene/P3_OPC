@@ -6,6 +6,11 @@
     font-family:"Roboto";
     font-family: "Shrikhand";
 }
+:root{
+    --vert: #99E2D0 ;
+    --violet: #9356DC;
+    --rose: #FF79DA;
+}
 
 body{
     margin: 0 auto;
@@ -15,6 +20,7 @@ body{
 a{
     list-style-type: none;
     text-decoration: none;
+    color: black;
 }
 
 /* HEADER */
@@ -26,10 +32,26 @@ a{
     width: 100%;
     padding: 10px;
 }
+
+/* LOCALISATION */
+
 .locsearch{
     display: flex;
     justify-content: center;
+    background-color:darkgray;
+    padding: 20px;   
 }
+.locsearch__icon{
+    padding-right:10px;
+
+}
+.locsearch__content{
+    padding-right: 15px;
+}
+.locsearch .fas{
+    font-size: large;
+}
+
 
 /* DESCRIPTION */
 
@@ -41,11 +63,15 @@ a{
     padding: 10px;
 }
 .description__text{
-    font-size: larger;
+    font-weight: 500;
+    font-size: xx-large;
+    text-align: center;
     
     
 }
 .description__sub{
     text-align: center;
+    font-weight: 200;
+    font-size: larger;
 }
 
