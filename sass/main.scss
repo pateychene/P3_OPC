@@ -19,6 +19,41 @@
 .locsearch{
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    background-color:#e2e2e2;
+    &__icon{
+      font-size: larger;
+      margin: 10px 10px 10px 0px;
+    }
+      &__content{
+        font-size: medium;
+        margin: 10px 10px 10px 0px;
+      }
 
-}  
+} 
+.description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f3;
+  &__text{
+    font-weight: 600;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+
+  }
+  &__sub{
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom:30px ;
+  }
+  &__button{
+    padding-bottom: 30px;
+    color: white;
+    text-align: center;
+
+  }
+} 
+

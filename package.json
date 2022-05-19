@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "application de reservation de restaurants ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pateychene/P3_OPC.git"
+  },
+  "author": "PAT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pateychene/P3_OPC/issues"
+  },
+  "homepage": "https://github.com/pateychene/P3_OPC#readme"
+}

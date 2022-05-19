@@ -4,16 +4,13 @@
   font-family: "Roboto";
   src: url("Polices/Roboto");
 }
-
 @font-face {
   font-family: "Shrikhand";
   src: url("Polices/Shrikhand");
 }
-
 /* SPE GENERALES */
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   font-family: "Roboto";
 }
@@ -29,51 +26,33 @@ a {
 /* HEADER PAGE PRINCIPALE */
 .header {
   padding: 15px 0 8px 0px;
-  -webkit-box-shadow: 0 0 16px 0 #0000002e;
-          box-shadow: 0 0 16px 0 #0000002e;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1803921569);
   text-align: center;
 }
-
 .header__image {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .locsearch {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: #e2e2e2;
 }
-
 .locsearch__icon {
   font-size: larger;
   margin: 10px 10px 10px 0px;
 }
-
 .locsearch__content {
   font-size: medium;
   margin: 10px 10px 10px 0px;
 }
 
 .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #f3f3f3;
 }
-
 .description__text {
   font-weight: 600;
   font-size: 25px;
@@ -81,17 +60,16 @@ a {
   padding-bottom: 10px;
   text-align: center;
 }
-
 .description__sub {
   font-weight: lighter;
   font-size: 20px;
   text-align: center;
   padding-bottom: 30px;
 }
-
 .description__button {
   padding-bottom: 30px;
   color: white;
   text-align: center;
 }
-/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=styles.css.map */
