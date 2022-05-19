@@ -1,0 +1,26 @@
+/* FONTS */
+/* --VARIABLES-- */
+/* HEADER PAGE PRINCIPALE */
+.header {
+  padding: 15px 0 8px 0px;
+  -webkit-box-shadow: 0 0 16px 0 #0000002e;
+          box-shadow: 0 0 16px 0 #0000002e;
+  text-align: center;
+}
+
+.header__image {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.locsearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: aqua;
+}
+/*# sourceMappingURL=main.css.map */
