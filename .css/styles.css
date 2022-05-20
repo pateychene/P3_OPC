@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   font-family: "Roboto";
+  margin: 0;
 }
 
 a {
@@ -37,6 +38,7 @@ a {
   display: flex;
   justify-content: center;
   background-color: #e2e2e2;
+  box-shadow: inset 0px 5px 5px 0px #ddd8d8;
 }
 .locsearch__icon {
   font-size: larger;
@@ -52,28 +54,91 @@ a {
   flex-direction: column;
   align-items: center;
   background-color: #f3f3f3;
-  height: 240px;
+  /* BOUTONS */
 }
 .description__text {
   font-weight: 600;
-  font-size: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 65%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   text-align: center;
 }
 .description__sub {
-  font-weight: lighter;
+  font-weight: 100;
   font-size: 20px;
   text-align: center;
-  padding-bottom: 30px;
+  margin: 0;
+  width: 83%;
 }
 .description .btn {
-  border-radius: 25px;
-  height: 50px;
-  width: 230px;
-  text-align: center;
-  color: white;
-  background: linear-gradient(to right, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  font-family: "Roboto-Black", sans-serif;
+  background: linear-gradient(170deg, #9356DC, #FF79DA);
+  opacity: 1;
+  width: 218px;
+  height: 45px;
+  margin: 1.5em 0 2.5em 0;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9em;
+  color: rgb(255, 254, 254);
+  transition: 0, 3s;
+}
+.description .btn:hover {
+  cursor: pointer;
+  background: linear-gradient(10deg, #9356DC, #FF79DA);
+  transform: scale(1.1);
+}
+
+/*Style des boutons */
+.list_fonctionnement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 12px;
+}
+
+.btn_choix {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  list-style: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 1em;
+  height: 70px;
+  padding-left: 15px;
+  margin: 0 2em 0 2em;
+}
+
+.btn_numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #fff;
+  background-color: #9356DC;
+  border: none;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: -15px;
+}
+
+.icon {
+  font-size: 1em;
+  color: #6b6b6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_text {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */
