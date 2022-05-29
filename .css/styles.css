@@ -93,16 +93,19 @@ a {
 /*Style des boutons */
 .list_fonctionnement {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 0 12px;
+}
+
+.section__title {
+  padding: 28px 0px 6px 26px;
+  font-weight: 800;
+  font-size: 22px;
 }
 
 .btn_choix {
   display: flex;
   align-items: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
   background-color: #f4f4f4;
   box-shadow: 0px 4px 4px 0px #ddd8d8;
   list-style: none;
@@ -110,8 +113,7 @@ a {
   border-radius: 15px;
   font-size: 1em;
   height: 70px;
-  padding-left: 15px;
-  margin: 0 2em 0 2em;
+  margin: 1.2em 2em 0 2em;
 }
 
 .btn_numero {
@@ -139,6 +141,17 @@ a {
 
 .btn_text {
   font-weight: 600;
+  padding: 25px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #9356DC;
+}
+
+.restaurant_card img {
+  width: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */
