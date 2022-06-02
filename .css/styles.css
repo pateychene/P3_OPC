@@ -158,6 +158,7 @@ a {
   width: 85%;
   margin: 20px;
   background-color: white;
+  border-radius: 20px;
 }
 .restaurant--card .restaurant--image img {
   width: 100%;
@@ -166,22 +167,25 @@ a {
   object-fit: cover;
 }
 .restaurant--card .restaurant--content {
-  padding: 0;
-  margin: 0;
+  padding: 5px;
+  margin: 1px;
   display: flex;
   flex-direction: column;
 }
 .restaurant--card .restaurant--title {
   margin: 0;
+  padding: 2px;
 }
 .restaurant--card .restaurant--loc {
   margin: 0;
+  padding: 4px;
 }
 .restaurant--card .new {
   position: absolute;
   bottom: 64px;
   left: 290px;
-  border: 3px solid green;
+  border: 3px solid #99E2D0;
+  background-color: #99E2D0;
 }
 .restaurant--card .icon {
   position: absolute;
@@ -190,6 +194,11 @@ a {
   line-height: 1;
   font-weight: lighter;
   color: black;
+}
+.restaurant--card .icon--:hover {
+  color: #9356DC;
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=styles.css.map */
