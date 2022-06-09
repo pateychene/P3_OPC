@@ -115,7 +115,9 @@
       color: $primary;
 }
 // Section restaurants //
-
+.list--restaurant{
+  padding-bottom: 20px;
+}
 
 .restaurant{
   background-color: #f3f3f3;
@@ -134,7 +136,7 @@
  border-radius: 20px 20px 0px 0px;
  -o-object-fit: cover;
    object-fit: cover;
-  height: 70%;
+  height: 205px;
   width: 100%;
 
 }
@@ -226,7 +228,31 @@ flex-direction: column;
   }
 }
 
-
+footer{
+  background-color: rgb(37, 37, 37);
+  img{
+    color: white;
+    filter: invert(1);
+    margin-bottom:25px ;
+  }
+  .footer-list{
+    list-style-type: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 20px;
+    margin: 0;
+  }
+  li{
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+  }
+  p{
+    margin: 8px;
+  }
+}
   
 
 
