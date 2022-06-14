@@ -130,6 +130,9 @@
  margin: 20px;
  background-color: white;
  border-radius: 20px;
+ position: relative;
+ display: block;
+ box-shadow: 0 5px 16px #0000002e;
 }
 
 .restaurant--image img{
@@ -145,6 +148,7 @@ padding: 5px;
 margin: 1px;
 display: flex;
 flex-direction: column;
+
 
 }
 .restaurant--title {
@@ -163,19 +167,13 @@ flex-direction: column;
 }
 
 
-.restaurant--link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 
-.new{
-  margin-block: -210px;
+
+.new {
   display: inline-block;
-   position: absolute;
-  left: 65%;
+  position: absolute; 
+  left: 69%;
+  bottom: 230px;
   border: 5px solid $tertiary;
   border-radius: 2px;
   background-color: $tertiary;
@@ -189,8 +187,9 @@ flex-direction: column;
 .fa-heart{
   display: inline-block;
   position: absolute;
-  left: 76%;
-  font-size: x-large;
+  left: 77%;
+  font-size: xx-large;
+  bottom: 30px;
 
     &:hover::after{
   cursor: pointer;
@@ -199,16 +198,15 @@ flex-direction: column;
   position:absolute;
   left: 0px;
   top: 0px;
-  width: 0%; 
-  font-size: x-large;
+  //width: 0%; 
+  font-size: xx-large;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-animation: fill 1s ease-in-out forwards;
-          animation: fill 1s ease-in-out forwards;
-  font-size: x-large;      
+          animation: fill 1s ease-in-out forwards;     
   }
 }
 
@@ -233,7 +231,9 @@ footer{
   img{
     color: white;
     filter: invert(1);
-    margin-bottom:25px ;
+    margin-top:20px ;
+    margin-left: 20px;
+    width: 135px;
   }
   .footer-list{
     list-style-type: none;
@@ -255,17 +255,21 @@ footer{
 }
   
 
+/* responsive restaurant */
 
+@media screen and (min-width: 1270px) {
+.restaurant--card{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+}
+  
 
-
-/*  Section Restaurants */
-
-
-/* responsive section restaurant */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant {
-    height: 1500px;
+    height: 800px;
     background-color: white;
   }
 }
@@ -278,114 +282,84 @@ footer{
 
 @media screen and (min-width: 1280px) {
   .restaurant {
-    margin-bottom: 5%;
+    margin-bottom: 30px;
   }
 }
 
-/* responsive du titre */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .restaurant--title {
-    font-size: 2.5em;
-    text-align: center;
-  }
-}
+
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .restaurant--title {
-    text-align: center;
     margin-left: 0%;
-    margin-bottom: 0%;
-    font-size: 2.5em;
+    font-size: 21px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .restaurant--title {
-    text-align: center;
+    
     margin-left: 0%;
     margin-bottom: 0%;
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+ 
+}
+/*  responsive  sections  */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .section__title{
+    text-align: center;
+    padding-right:22px;
   }
 }
-/* fin responsive titre 
 
-.list--restaurant {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%; */
+
+
 
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .list--restaurant {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+   display: flex;
+   flex-direction: row;
+   padding: auto;
   }
-}
-
-@media screen and (min-width: 1280px) {
-  .list--restaurant {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  .list_fonctionnement{
+    align-items: center;
   }
+  .btn_choix{
+    width: 350px;
+    font-size: 20px;
+  }
+  
 }
 
 
-
-/* Section restaurant 
-
-*/
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .restaurant {
-    width: 80%;
+    width: 50%;
   }
-}
+ 
+  
+  }
+
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .restaurant {
-    width: 45%;
+    width: 100%;
     margin-bottom: 0%;
-    margin-right: 2%;
-    margin-left: 2%;
-    height: 25%;
+    
+    
+    
   }
 }
 
 @media screen and (min-width: 1280px) {
   .restaurant {
-    width: 45%;
+    width: 100%;
     margin-bottom: 0%;
-    margin-right: 2%;
-    margin-left: 2%;
-    height: 35%;
+    
+    
   }
 }
 
@@ -396,10 +370,4 @@ footer{
 
 
 
-
-@media screen and (min-width: 1280px) {
-  .restaurant--image {
-    height: 79%;
-  }
-}
 
