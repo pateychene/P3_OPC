@@ -252,6 +252,7 @@ a {
     width: 100%;
   }
 }
+/* FOOTER */
 footer {
   background-color: rgb(37, 37, 37);
 }
@@ -280,6 +281,21 @@ footer p {
   margin: 8px;
 }
 
+/*responsive footer */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-list {
+    align-items: center;
+  }
+  footer img {
+    margin: none;
+    align-items: center;
+  }
+}
 /* responsive restaurant */
 @media screen and (min-width: 1270px) {
   .restaurant--card {
@@ -360,6 +376,60 @@ footer p {
 .restaurant:hover {
   -webkit-box-shadow: 0px 4px 4px 1px #c7c7c7;
   box-shadow: 0px 4px 4px 1px #c7c7c7;
+}
+
+/* Style page menu */
+.resto_page {
+  margin: 0;
+  padding: 0;
+}
+.resto_page .resto_header {
+  display: flex;
+  align-items: center;
+  flex-direction: initial;
+}
+.resto_page .resto_icon {
+  font-size: 23px;
+  color: black;
+  padding: 10px;
+}
+.resto_page img {
+  width: 230px;
+  padding-left: 30px;
+}
+
+.resto_subheader img {
+  width: 100%;
+  padding-left: 0;
+  padding-top: 10px;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.resto_card {
+  position: absolute;
+  top: 255px;
+  width: 100%;
+  background-color: #99E2D0;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.resto_head {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+}
+
+.resto_name {
+  font-family: "Shrikhand";
+  font-size: xx-large;
+  margin: 21px 4px 8px 5px;
+}
+
+.resto_heart {
+  position: relative;
+  top: 47px;
+  left: 19px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -225,6 +225,7 @@ flex-direction: column;
     width: 100%;
   }
 }
+/* FOOTER */
 
 footer{
   background-color: rgb(37, 37, 37);
@@ -252,6 +253,24 @@ footer{
   p{
     margin: 8px;
   }
+}
+
+/*responsive footer */
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .footer-list{
+      align-items: center;
+    }
+    img{
+      margin: none;
+      align-items: center;
+    }
+  }
+  
 }
   
 
@@ -369,5 +388,59 @@ footer{
 }
 
 
+/* Style page menu */
+
+.resto_page{
+  margin: 0;
+  padding: 0;
+.resto_header{
+  display: flex;
+  align-items: center;
+  flex-direction: initial;
+} 
+.resto_icon{
+  font-size: 23px;
+  color: black;
+  padding: 10px;
+}
+img{
+  width: 230px;
+  padding-left:30px;
+} 
+}
+
+.resto_subheader img{
+  width:100%;
+  padding-left: 0;
+  padding-top: 10px;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.resto_card{
+  position: absolute;
+  top: 255px;
+  width: 100%;
+  background-color: $tertiary;
+  border-radius: 30px 30px 0px 0px;
+  
+}
+
+.resto_head{
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+}
+.resto_name{
+  font-family:'Shrikhand';
+  font-size: xx-large;
+  margin: 21px 4px 8px 5px;
+
+}
+.resto_heart{
+  position:relative;
+  top: 47px;
+  left: 19px;
+}
 
 
