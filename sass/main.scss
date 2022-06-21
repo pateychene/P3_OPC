@@ -204,12 +204,26 @@ flex-direction: column;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-animation: fill 1s ease-in-out forwards;
-          animation: fill 1s ease-in-out forwards;     
+  -webkit-animation: fill 1s ease forwards;
+          animation: fill 1s ease forwards;     
   }
 }
-
+@keyframes fill {
+  0%  {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  75%{
+    width: 75%;
+  }
+   100% {
+    width: 100%;
+  }
+}
 
 @-webkit-keyframes fill {
   0% {
@@ -421,7 +435,7 @@ img{
   position: absolute;
   top: 255px;
   width: 100%;
-  background-color: $tertiary;
+  background-color:#f3f3f3;
   border-radius: 30px 30px 0px 0px;
   
 }
@@ -430,11 +444,12 @@ img{
   display: flex;
   flex-direction: initial;
   align-items: center;
+  padding-left: 5px;
 }
 .resto_name{
   font-family:'Shrikhand';
   font-size: xx-large;
-  margin: 21px 4px 8px 5px;
+  margin: 16px 10px 13px 2px;
 
 }
 .resto_heart{
@@ -444,3 +459,201 @@ img{
 }
 
 
+.resto { 
+  background-color: whitesmoke;
+  position: relative;
+  border-radius: 23px;
+  bottom: 49px;
+
+  &__menu {
+    &__title {
+      margin: 24px 0px 8px 18px;
+      border-bottom: 3px solid #99e2d0;
+      padding-bottom: 6px;
+      width: 11%;
+    }
+  }
+}
+.resto__element {
+  border-radius: 10px;
+  background-color: white;
+  width: 92%;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 12px;
+  box-shadow: 0 5px 16px #0000002e;
+  position: relative;
+  animation-duration: 1s;
+  animation-name: appear;
+  transform: scale(0);
+  animation-fill-mode: both;
+  height: 69px;
+}
+.resto__check {
+  height: 74%;
+  right: 0px;
+  top: 0;
+  width: 0px;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.resto__contents {
+  display: flex;
+  &:hover .resto__check {
+    width: 40px;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+  }
+  &:hover .resto__contents__left {
+    width: calc(100% - 40px);
+    
+  }
+  &__title {
+    font-weight: 800;
+    margin: 0;
+  }
+  &__left {
+    width: 100%;
+    padding: 0.7em;
+    position: relative;
+    box-sizing: border-box;
+  }
+  &__inline {
+    display: flex;
+    padding-top: 5px;
+
+    &__subtitle {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 82%;
+    }
+    &__price {
+      position: absolute;
+      right: 5%;
+    }
+  }
+}
+
+
+
+/* animation menu restaurant */
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.anim {
+  &-1{
+    animation-delay: 0.1s;
+  }
+  &-2{
+    animation-delay: 0.2s;
+  }
+  &-3{
+    animation-delay: 0.3s;
+  }
+  &-4{
+    animation-delay: 0.4s;
+  }
+  &-5{
+    animation-delay: 0.5s;
+  }
+  &-6{
+    animation-delay: 0.6s;
+  }
+  &-7{
+    animation-delay: 0.7s;
+  }
+  &-8{
+    animation-delay: 0.8s;
+  }
+  &-9{
+    animation-delay: 0.9s;
+  }
+  &-10{
+    animation-delay: 1s;
+  }
+}
+/* responsive menu */
+@media (min-width: 450px) and (max-width: 767px){
+  .resto{
+    &__menu{
+      &__title{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &__element{
+      width: 350px;
+    }
+  }
+}
+
+
+/* LOADER */
+.bloc {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  animation: off;
+  animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+
+
+
+.bloc__loader {
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 167px;
+  height: 167px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  content: " ";
+  border-radius: 50%;
+  border: 6px solid $primary;
+  border-color: $tertiary transparent $secondary transparent;
+  animation: bloc__loader 1.2s linear infinite;
+}
+/* animation loader */
+
+@keyframes bloc__loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* animation bloc */
+
+@keyframes off{
+  from {
+  
+    opacity: 90%;
+}
+to {
+  display: none;
+  opacity: 0%;
+  z-index: -1;
+  
+}
+}
+}
