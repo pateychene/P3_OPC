@@ -24,6 +24,27 @@ a {
 
 /* --VARIABLES-- */
 /* --VARIABLES-- */
+/*--BOUTONS-- */
+.btn {
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  font-family: "Roboto-Black", sans-serif;
+  background: linear-gradient(170deg, #9356DC, #FF79DA);
+  opacity: 1;
+  width: 218px;
+  height: 45px;
+  margin: 1.5em 0 2.5em 0;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9em;
+  color: rgb(255, 254, 254);
+  transition: 0, 3s;
+}
+.btn:hover {
+  cursor: pointer;
+  background: linear-gradient(10deg, #9356DC, #FF79DA);
+  transform: scale(1.1);
+}
+
 /* HEADER PAGE PRINCIPALE */
 .header {
   padding: 15px 0 8px 0px;
@@ -69,25 +90,6 @@ a {
   text-align: center;
   margin: 0;
   width: 83%;
-}
-.description .btn {
-  box-shadow: 0px 4px 4px 0px #ddd8d8;
-  font-family: "Roboto-Black", sans-serif;
-  background: linear-gradient(170deg, #9356DC, #FF79DA);
-  opacity: 1;
-  width: 218px;
-  height: 45px;
-  margin: 1.5em 0 2.5em 0;
-  border: none;
-  border-radius: 50px;
-  font-size: 0.9em;
-  color: rgb(255, 254, 254);
-  transition: 0, 3s;
-}
-.description .btn:hover {
-  cursor: pointer;
-  background: linear-gradient(10deg, #9356DC, #FF79DA);
-  transform: scale(1.1);
 }
 
 /*Style des boutons */
@@ -296,6 +298,7 @@ footer p {
   margin: 8px;
 }
 
+/* bouton resto */
 /*responsive footer */
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   footer {
@@ -505,6 +508,7 @@ footer p {
 .resto__contents__title {
   font-weight: 800;
   margin: 0;
+  font-size: large;
 }
 .resto__contents__left {
   width: 100%;
@@ -514,7 +518,8 @@ footer p {
 }
 .resto__contents__inline {
   display: flex;
-  padding-top: 5px;
+  padding-top: 0px;
+  font-size: medium;
 }
 .resto__contents__inline__subtitle {
   text-overflow: ellipsis;
@@ -604,7 +609,7 @@ footer p {
   content: " ";
   border-radius: 50%;
   border: 6px solid #9356DC;
-  border-color: #99E2D0 transparent #FF79DA transparent;
+  border-color: #9356DC transparent #FF79DA transparent;
   animation: bloc__loader 1.2s linear infinite;
 }
 @keyframes bloc__loader {
@@ -624,6 +629,26 @@ footer p {
     opacity: 0%;
     z-index: -1;
   }
+}
+
+.resto__btn {
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  font-family: "Roboto-Black", sans-serif;
+  background: linear-gradient(170deg, #9356DC, #FF79DA);
+  opacity: 1;
+  width: 218px;
+  height: 45px;
+  margin: 2px 5px 24px 80px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9em;
+  color: rgb(255, 254, 254);
+  transition: 0, 3s;
+}
+.resto__btn:hover {
+  cursor: pointer;
+  background: linear-gradient(10deg, #9356DC, #FF79DA);
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=styles.css.map */

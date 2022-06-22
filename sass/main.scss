@@ -4,6 +4,8 @@
 /* --VARIABLES-- */
 @import "./utils/variables";
 
+/*--BOUTONS-- */
+@import "./components/composants";
 
 /* HEADER PAGE PRINCIPALE */
 
@@ -52,7 +54,7 @@
     width: 83%;
   }
   /* BOUTONS */
-  @import "./components/composants";
+  
 }
   
   /*Style des boutons */
@@ -268,6 +270,10 @@ footer{
     margin: 8px;
   }
 }
+
+/* bouton resto */
+
+
 
 /*responsive footer */
 
@@ -517,6 +523,7 @@ img{
   &__title {
     font-weight: 800;
     margin: 0;
+    font-size: large;
   }
   &__left {
     width: 100%;
@@ -526,7 +533,8 @@ img{
   }
   &__inline {
     display: flex;
-    padding-top: 5px;
+    padding-top: 0px;
+    font-size: medium;
 
     &__subtitle {
       text-overflow: ellipsis;
@@ -628,7 +636,7 @@ img{
   content: " ";
   border-radius: 50%;
   border: 6px solid $primary;
-  border-color: $tertiary transparent $secondary transparent;
+  border-color: $primary transparent $secondary transparent;
   animation: bloc__loader 1.2s linear infinite;
 }
 /* animation loader */
@@ -657,3 +665,24 @@ to {
 }
 }
 }
+
+.resto__btn{
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  font-family: "Roboto-Black", sans-serif;
+  background: linear-gradient(170deg,$primary,$secondary);
+  opacity: 1;
+  width: 218px;
+  height: 45px;
+  margin:2px 5px 24px 80px ;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9em;
+  color: rgb(255, 254, 254);
+  transition: 0,3s;
+  &:hover{
+    cursor: pointer;
+    background:linear-gradient(10deg, $primary , $secondary) ;
+    transform: scale(1.1);
+}
+}
+  
