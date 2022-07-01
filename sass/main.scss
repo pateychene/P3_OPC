@@ -25,11 +25,12 @@
     box-shadow: inset 0px 5px 5px 0px #ddd8d8;
     &__icon{
       font-size: larger;
-      margin: 10px 10px 10px 0px;
+      //margin: 10px 10px 10px 0px;
+      margin:$marge;
     }
       &__content{
         font-size: medium;
-        margin: 10px 10px 10px 0px;
+        margin:$marge;
       }
 
 } 
@@ -168,7 +169,10 @@ flex-direction: column;
   font-size: 1.1em;
 }
 
-
+.restaurant:hover {
+  -webkit-box-shadow: 0px 4px 4px 1px #c7c7c7;
+          box-shadow: 0px 4px 4px 1px #c7c7c7;
+}
 
 
 .new {
@@ -199,8 +203,7 @@ flex-direction: column;
   content: "\f004";
   position:absolute;
   left: 0px;
-  top: 0px;
-  //width: 0%; 
+  top: 0px; 
   font-size: xx-large;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
@@ -271,13 +274,9 @@ footer{
   }
 }
 
-/* bouton resto */
+/*Responsive FOOTER */
 
-
-
-/*responsive footer */
-
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
+@media screen and (min-width: 768px)  {
   footer{
     display: flex;
     flex-direction: column;
@@ -286,15 +285,16 @@ footer{
       align-items: center;
     }
     img{
-      margin: none;
+      margin: 20px 20px 10px 15px;
       align-items: center;
+      width: 270px;
     }
   }
   
 }
   
 
-/* responsive restaurant */
+/* RESPONSIVE SECTION RESTAURANT  */
 
 @media screen and (min-width: 1270px) {
 .restaurant--card{
@@ -303,30 +303,12 @@ footer{
   flex-direction: column;
 }
 }
-  
-
 
 @media screen and (min-width: 768px)  {
-  .restaurant {
-    height: 800px;
-    background-color: white;
+  .restaurant--card {
+    width: 40%;
   }
 }
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .restaurant {
-    padding-top: 0%;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .restaurant {
-    margin-bottom: 30px;
-  }
-}
-
-
-
 
 @media screen and (min-width: 768px)  {
   .restaurant--title {
@@ -344,7 +326,15 @@ footer{
   }
  
 }
-/*  responsive  sections  */
+@media screen and (min-width: 768px)  {
+  .list--restaurant {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+}
+/*  RESPONSIVE SECTION FONCTIONNEMENT   */
+
 @media screen and (min-width: 768px)  {
   .section__title{
     text-align: center;
@@ -352,16 +342,6 @@ footer{
   }
 }
 
-
-
-
-
-@media screen and (min-width: 768px)  {
-  .list--restaurant {
-   display: flex;
-   flex-direction: row;
-   padding: auto;
-  }
   .list_fonctionnement{
     align-items: center;
   }
@@ -370,45 +350,28 @@ footer{
     font-size: 20px;
   }
   
-}
+
 
 
 
 @media screen and (min-width: 768px)  {
   .restaurant {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 0%;
   }
  
   
   }
 
 
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .restaurant {
-    width: 100%;
-    margin-bottom: 0%;
-    
-    
-    
-  }
-}
 
-@media screen and (min-width: 1280px) {
-  .restaurant {
-    width: 100%;
-    margin-bottom: 0%;
-    
-    
-  }
-}
-
-.restaurant:hover {
-  -webkit-box-shadow: 0px 4px 4px 1px #c7c7c7;
-          box-shadow: 0px 4px 4px 1px #c7c7c7;
-}
 
 
 /* Style page menu */
+
+.box{
+  padding-bottom: 25px;
+}
 
 .resto_page{
   margin: 0;
@@ -455,7 +418,7 @@ img{
 .resto_name{
   font-family:'Shrikhand';
   font-size: xx-large;
-  margin: 16px 10px 13px 2px;
+  margin: 16px 4px 13px 2px;
 
 }
 .resto_heart{
@@ -506,7 +469,7 @@ img{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 1.3s ease;
 }
 
 .resto__contents {
@@ -593,21 +556,6 @@ img{
     animation-delay: 1s;
   }
 }
-/* responsive menu */
-@media (min-width: 450px) and (max-width: 767px){
-  .resto{
-    &__menu{
-      &__title{
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    &__element{
-      width: 350px;
-    }
-  }
-}
-
 
 /* LOADER */
 .bloc {
@@ -678,7 +626,7 @@ to {
   border-radius: 50px;
   font-size: 0.9em;
   color: rgb(255, 254, 254);
-  transition: 0,3s;
+  transition: 1.3s;
   &:hover{
     cursor: pointer;
     background:linear-gradient(10deg, $primary , $secondary) ;
@@ -686,3 +634,51 @@ to {
 }
 }
   
+
+/* responsive pages de menus */
+
+@media (min-width: 768px) {
+  .resto{
+    margin: 10px 10px 10px 10px;
+    height: 499px;
+    .resto_head{
+      justify-content: center;
+    }
+    .resto__menu{
+      width: 30%;
+      .resto__title{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .resto__element{
+      width: 244px;
+    }
+  
+  }
+  .box{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .resto_subheader img{
+    height: 225px;
+  }
+  .resto_header img{
+    padding-left: 38%;
+  }
+.resto__btn{
+    margin: 0% 0% 2% 41%;
+  }  
+.resto__contents__title{
+  font-size: smaller;
+
+
+}
+.resto__contents__inline{
+  font-size: small;
+}
+.resto__check{
+  height: 70px;
+}
+}

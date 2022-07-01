@@ -1,0 +1,40 @@
+/* HEADER Page Principale */
+.header {
+    padding: 15px 0 8px 0px;
+    box-shadow: 0 0 16px 0 #0000002e;
+    text-align: center;
+    &__image {
+      justify-content: center;
+    }
+  }
+
+  .locsearch{
+    display: flex;
+    justify-content: center;
+    background-color:#e2e2e2;
+    box-shadow: inset 0px 5px 5px 0px #ddd8d8;
+    &__icon{
+      font-size: larger;
+      margin: 10px 10px 10px 0px;
+    }
+      &__content{
+        font-size: medium;
+        margin: 10px 10px 10px 0px;
+      }
+
+} 
+
+/* HEADER Page Menu */
+
+.resto_header{
+    display: flex;
+    align-items: center;
+    flex-direction: initial;
+  } 
+  .resto_subheader img{
+    width:100%;
+    padding-left: 0;
+    padding-top: 10px;
+    height: 30vh;
+    object-fit: cover;
+  }

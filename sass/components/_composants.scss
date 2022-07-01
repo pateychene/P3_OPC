@@ -10,7 +10,7 @@
     border-radius: 50px;
     font-size: 0.9em;
     color: rgb(255, 254, 254);
-    transition: 0,3s;
+    transition: 1.3s;
     &:hover{
       cursor: pointer;
       background:linear-gradient(10deg, $primary , $secondary) ;
