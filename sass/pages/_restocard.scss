@@ -1,0 +1,192 @@
+/* PAGE DE RESTO-CARD */
+
+.box{
+    padding-bottom: 25px;
+  }
+  
+  .resto_page{
+    margin: 0;
+    padding: 0;
+  .resto_header{
+    display: flex;
+    align-items: center;
+    flex-direction: initial;
+  } 
+  .resto_icon{
+    font-size: 23px;
+    color: black;
+    padding: 10px;
+  }
+  img{
+    width: 230px;
+    padding-left:30px;
+  } 
+  }
+  
+  .resto_subheader img{
+    width:100%;
+    padding-left: 0;
+    padding-top: 10px;
+    height: 30vh;
+    object-fit: cover;
+  }
+  
+  .resto_card{
+    position: absolute;
+    top: 255px;
+    width: 100%;
+    background-color:#f3f3f3;
+    border-radius: 30px 30px 0px 0px;
+    
+  }
+  
+  .resto_head{
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    padding-left: 5px;
+  }
+  .resto_name{
+    font-family:'Shrikhand';
+    font-size: xx-large;
+    margin: 16px 4px 13px 2px;
+  
+  }
+  .resto_heart{
+    position:relative;
+    top: 47px;
+    left: 19px;
+  }
+  
+  
+  .resto { 
+    background-color: whitesmoke;
+    position: relative;
+    border-radius: 23px;
+    bottom: 49px;
+  
+    &__menu {
+      &__title {
+        margin: 24px 0px 8px 18px;
+        border-bottom: 3px solid #99e2d0;
+        padding-bottom: 6px;
+        width: 11%;
+      }
+    }
+  }
+  .resto__element {
+    border-radius: 10px;
+    background-color: white;
+    width: 92%;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 12px;
+    box-shadow: 0 5px 16px #0000002e;
+    position: relative;
+    animation-duration: 1s;
+    animation-name: appear;
+    transform: scale(0);
+    animation-fill-mode: both;
+    height: 69px;
+  }
+  .resto__check {
+    height: 74%;
+    right: 0px;
+    top: 0;
+    width: 0px;
+    background: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 1.3s ease;
+  }
+  
+  .resto__contents {
+    display: flex;
+    &:hover .resto__check {
+      width: 40px;
+      border-radius: 0px 10px 10px 0px;
+      cursor: pointer;
+    }
+    &:hover .resto__contents__left {
+      width: calc(100% - 40px);
+      
+    }
+    &__title {
+      font-weight: 800;
+      margin: 0;
+      font-size: large;
+    }
+    &__left {
+      width: 100%;
+      padding: 0.7em;
+      position: relative;
+      box-sizing: border-box;
+    }
+    &__inline {
+      display: flex;
+      padding-top: 0px;
+      font-size: medium;
+  
+      &__subtitle {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 82%;
+      }
+      &__price {
+        position: absolute;
+        right: 5%;
+      }
+    }
+  }
+
+  /* RESPONSIVE PAGE RESTO-CARD */
+
+@media (min-width: 768px) {
+    .resto{
+      margin: 10px 10px 10px 10px;
+      height: 499px;
+      .resto_head{
+        justify-content: center;
+      }
+      .resto__menu{
+        width: 30%;
+        .resto__title{
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .resto__element{
+        width: 244px;
+      }
+    
+    }
+    .box{
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .resto_subheader img{
+      height: 225px;
+    }
+    .resto_header img{
+      padding-left: 38%;
+    }
+  .resto__btn{
+      margin: 0% 0% 2% 41%;
+    }  
+  .resto__contents__title{
+    font-size: smaller;
+  
+  
+  }
+  .resto__contents__inline{
+    font-size: small;
+  }
+  .resto__check{
+    height: 70px;
+  }
+  }

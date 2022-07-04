@@ -1,4 +1,6 @@
-/* FONTS */
+/* --VARIABLES-- */
+/* --VARIABLES-- */
+/*--REGLES GENERALES--*/
 /* FONTS */
 @font-face {
   font-family: "Roboto";
@@ -22,9 +24,96 @@ a {
   color: black;
 }
 
-/* --VARIABLES-- */
-/* --VARIABLES-- */
 /*--BOUTONS-- */
+/* ANIMATION COEUR */
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* ANIMATION RESTO-CARD MENU */
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.anim-1 {
+  animation-delay: 0.1s;
+}
+.anim-2 {
+  animation-delay: 0.2s;
+}
+.anim-3 {
+  animation-delay: 0.3s;
+}
+.anim-4 {
+  animation-delay: 0.4s;
+}
+.anim-5 {
+  animation-delay: 0.5s;
+}
+.anim-6 {
+  animation-delay: 0.6s;
+}
+.anim-7 {
+  animation-delay: 0.7s;
+}
+.anim-8 {
+  animation-delay: 0.8s;
+}
+.anim-9 {
+  animation-delay: 0.9s;
+}
+.anim-10 {
+  animation-delay: 1s;
+}
+
+/* ANIMATION LOADER */
+@keyframes bloc__loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ANIMATION BLOC_LOADER */
+@keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: -1;
+  }
+}
 .btn {
   box-shadow: 0px 4px 4px 0px #ddd8d8;
   font-family: "Roboto-Black", sans-serif;
@@ -43,9 +132,64 @@ a {
   cursor: pointer;
   background: linear-gradient(10deg, #9356DC, #FF79DA);
   transform: scale(1.1);
+  filter: brightness(130%);
+  box-shadow: 0px 10px 10px black;
 }
 
-/* HEADER PAGE PRINCIPALE */
+/* BOUTON PAGE RESTO-CARD */
+.resto__btn {
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  font-family: "Roboto-Black", sans-serif;
+  background: linear-gradient(170deg, #9356DC, #FF79DA);
+  opacity: 1;
+  width: 218px;
+  height: 45px;
+  margin: 2px 5px 24px 80px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9em;
+  color: rgb(255, 254, 254);
+  transition: 1.3s;
+}
+.resto__btn:hover {
+  cursor: pointer;
+  background: linear-gradient(10deg, #9356DC, #FF79DA);
+  transform: scale(1.1);
+  filter: brightness(130%);
+  box-shadow: 0px 10px 10px 0px black;
+}
+
+/* LOADER */
+.bloc {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  animation: off;
+  animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+}
+.bloc .bloc__loader {
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 167px;
+  height: 167px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  content: " ";
+  border-radius: 50%;
+  border: 6px solid #9356DC;
+  border-color: #9356DC transparent #FF79DA transparent;
+  animation: bloc__loader 1.2s linear infinite;
+}
+
+/*--LAYOUTS--*/
+/* HEADER Page Principale */
 .header {
   padding: 15px 0 8px 0px;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1803921569);
@@ -70,12 +214,27 @@ a {
   margin: 10px 10px 10px 0px;
 }
 
+/* HEADER Page Menu */
+.resto_header {
+  display: flex;
+  align-items: center;
+  flex-direction: initial;
+}
+
+.resto_subheader img {
+  width: 100%;
+  padding-left: 0;
+  padding-top: 10px;
+  height: 30vh;
+  object-fit: cover;
+}
+
+/* SUBHEADER PAGE PRINCIPALE */
 .description {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f3f3f3;
-  /* BOUTONS */
 }
 .description__text {
   font-weight: 600;
@@ -92,7 +251,7 @@ a {
   width: 83%;
 }
 
-/*Style des boutons */
+/* SECTION FONCTIONNEMENT */
 .list_fonctionnement {
   display: flex;
   flex-direction: column;
@@ -251,79 +410,6 @@ a {
   animation: fill 1s ease forwards;
 }
 
-@keyframes fill {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes fill {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-/* FOOTER */
-footer {
-  background-color: rgb(37, 37, 37);
-}
-footer img {
-  color: white;
-  filter: invert(1);
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 135px;
-}
-footer .footer-list {
-  list-style-type: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  padding: 20px;
-  margin: 0;
-}
-footer li {
-  display: flex;
-  flex-direction: initial;
-  align-items: center;
-}
-footer p {
-  margin: 8px;
-}
-
-/*Responsive FOOTER */
-@media screen and (min-width: 768px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .footer-list {
-    align-items: center;
-  }
-  footer img {
-    margin: 20px 20px 10px 15px;
-    align-items: center;
-    width: 270px;
-  }
-}
 /* RESPONSIVE SECTION RESTAURANT  */
 @media screen and (min-width: 1270px) {
   .restaurant--card {
@@ -353,8 +439,10 @@ footer p {
 @media screen and (min-width: 768px) {
   .list--restaurant {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 /*  RESPONSIVE SECTION FONCTIONNEMENT   */
@@ -379,7 +467,57 @@ footer p {
     margin-bottom: 0%;
   }
 }
-/* Style page menu */
+/* FOOTER */
+footer {
+  background-color: rgb(37, 37, 37);
+}
+footer img {
+  color: white;
+  filter: invert(1);
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 135px;
+}
+footer .footer-list {
+  list-style-type: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 20px;
+  margin: 0;
+}
+footer li {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+}
+footer p {
+  margin: 8px;
+  color: white;
+}
+footer footer a {
+  color: white;
+}
+
+/* RESPONSIVE FOOTER */
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-list {
+    align-items: center;
+  }
+  footer img {
+    margin: 20px 20px 10px 15px;
+    align-items: center;
+    width: 270px;
+  }
+}
+/* PAGE RESTO */
+/* PAGE DE RESTO-CARD */
 .box {
   padding-bottom: 25px;
 }
@@ -519,116 +657,7 @@ footer p {
   right: 5%;
 }
 
-/* animation menu restaurant */
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.anim-1 {
-  animation-delay: 0.1s;
-}
-.anim-2 {
-  animation-delay: 0.2s;
-}
-.anim-3 {
-  animation-delay: 0.3s;
-}
-.anim-4 {
-  animation-delay: 0.4s;
-}
-.anim-5 {
-  animation-delay: 0.5s;
-}
-.anim-6 {
-  animation-delay: 0.6s;
-}
-.anim-7 {
-  animation-delay: 0.7s;
-}
-.anim-8 {
-  animation-delay: 0.8s;
-}
-.anim-9 {
-  animation-delay: 0.9s;
-}
-.anim-10 {
-  animation-delay: 1s;
-}
-
-/* LOADER */
-.bloc {
-  background-color: white;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
-  animation: off;
-  animation-duration: 3s;
-  transition: opacity 3s ease-in-out;
-  animation-delay: 1.75s;
-  animation-fill-mode: both;
-  /* animation loader */
-  /* animation bloc */
-}
-.bloc .bloc__loader {
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  width: 167px;
-  height: 167px;
-  margin-top: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  content: " ";
-  border-radius: 50%;
-  border: 6px solid #9356DC;
-  border-color: #9356DC transparent #FF79DA transparent;
-  animation: bloc__loader 1.2s linear infinite;
-}
-@keyframes bloc__loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes off {
-  from {
-    opacity: 90%;
-  }
-  to {
-    display: none;
-    opacity: 0%;
-    z-index: -1;
-  }
-}
-
-.resto__btn {
-  box-shadow: 0px 4px 4px 0px #ddd8d8;
-  font-family: "Roboto-Black", sans-serif;
-  background: linear-gradient(170deg, #9356DC, #FF79DA);
-  opacity: 1;
-  width: 218px;
-  height: 45px;
-  margin: 2px 5px 24px 80px;
-  border: none;
-  border-radius: 50px;
-  font-size: 0.9em;
-  color: rgb(255, 254, 254);
-  transition: 1.3s;
-}
-.resto__btn:hover {
-  cursor: pointer;
-  background: linear-gradient(10deg, #9356DC, #FF79DA);
-  transform: scale(1.1);
-}
-
-/* responsive pages de menus */
+/* RESPONSIVE PAGE RESTO-CARD */
 @media (min-width: 768px) {
   .resto {
     margin: 10px 10px 10px 10px;

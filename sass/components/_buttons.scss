@@ -1,0 +1,46 @@
+.btn {
+    box-shadow: 0px 4px 4px 0px #ddd8d8;
+    font-family: "Roboto-Black", sans-serif;
+    background: linear-gradient(170deg,$primary,$secondary);
+    opacity: 1;
+    width: 218px;
+    height: 45px;
+    margin: 1.5em 0 2.5em 0;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.9em;
+    color: rgb(255, 254, 254);
+    transition: 1.3s;
+    &:hover{
+      cursor: pointer;
+      background:linear-gradient(10deg, $primary , $secondary) ;
+      transform: scale(1.1);
+      filter: brightness(130%);
+      box-shadow: 0px 10px 10px black;
+    }
+
+  }
+
+  /* BOUTON PAGE RESTO-CARD */
+
+.resto__btn{
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  font-family: "Roboto-Black", sans-serif;
+  background: linear-gradient(170deg,$primary,$secondary);
+  opacity: 1;
+  width: 218px;
+  height: 45px;
+  margin:2px 5px 24px 80px ;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9em;
+  color: rgb(255, 254, 254);
+  transition: 1.3s;
+  &:hover{
+    cursor: pointer;
+    background:linear-gradient(10deg, $primary , $secondary) ;
+    transform: scale(1.1);
+    filter: brightness(130%);
+    box-shadow: 0px 10px 10px 0px black;
+}
+}

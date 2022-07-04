@@ -1,0 +1,231 @@
+/* SECTION FONCTIONNEMENT */
+
+.list_fonctionnement{
+    display:flex ; 
+    flex-direction:column;
+    padding : 0 12px ;
+  }
+
+  .section__title{
+    padding: 28px 0px 6px  26px;
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+ .btn_choix {  
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 4px 0px #ddd8d8;
+  list-style: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 1em;
+  height: 70px;
+  margin: 1.2em 2em 0 2em;
+}
+.btn_choix :hover{
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
+
+  .btn_numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #fff;
+    background-color: $primary;
+    border: none;
+    border-radius: 100%;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: -15px;
+  }
+
+  .icon {
+    font-size: 1em;
+    color: #6b6b6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.btn_text{
+   font-weight: 600;
+   padding: 25px;
+  }
+
+.icon:hover{
+  cursor: pointer;
+      transform: scale(1.1);
+      color: $primary;
+}
+
+// SECTION RESTAURANT  //
+.list--restaurant{
+    padding-bottom: 20px;
+  }
+  
+  .restaurant{
+    background-color: #f3f3f3;
+    width: 100%;
+    padding-top: 5%;
+  }
+  
+  .restaurant--card{
+   width: 85%;
+   margin: 20px;
+   background-color: white;
+   border-radius: 20px;
+   position: relative;
+   display: block;
+   box-shadow: 0 5px 16px #0000002e;
+  }
+  
+  .restaurant--image img{
+   border-radius: 20px 20px 0px 0px;
+   -o-object-fit: cover;
+     object-fit: cover;
+    height: 205px;
+    width: 100%;
+  
+  }
+  .restaurant--content{
+  padding: 5px;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  
+  
+  }
+  .restaurant--title {
+    margin-bottom: 0%;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 1.3em;
+  }
+  
+  
+  
+  .restaurant--loc {
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 1.1em;
+  }
+  
+  .restaurant:hover {
+    -webkit-box-shadow: 0px 4px 4px 1px #c7c7c7;
+            box-shadow: 0px 4px 4px 1px #c7c7c7;
+  }
+  
+  
+  .new {
+    display: inline-block;
+    position: absolute; 
+    left: 69%;
+    bottom: 230px;
+    border: 5px solid $tertiary;
+    border-radius: 2px;
+    background-color: $tertiary;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    font-weight: 500;
+    color: #2c9c81;
+    padding: 0.2% 2%;
+    font-size: 1em;
+  }
+  .fa-heart{
+    display: inline-block;
+    position: absolute;
+    left: 77%;
+    font-size: xx-large;
+    bottom: 30px;
+  
+      &:hover::after{
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f004";
+    position:absolute;
+    left: 0px;
+    top: 0px; 
+    font-size: xx-large;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-animation: fill 1s ease forwards;
+            animation: fill 1s ease forwards;     
+    }
+  }
+
+  /* RESPONSIVE SECTION RESTAURANT  */
+
+@media screen and (min-width: 1270px) {
+  .restaurant--card{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  }
+  
+  @media screen and (min-width: 768px)  {
+    .restaurant--card {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (min-width: 768px)  {
+    .restaurant--title {
+      margin-left: 0%;
+      font-size: 21px;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .restaurant--title {
+      
+      margin-left: 0%;
+      margin-bottom: 0%;
+      font-size: 1.5em;
+    }
+   
+  }
+  @media screen and (min-width: 768px)  {
+    .list--restaurant {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+    }
+  }
+  /*  RESPONSIVE SECTION FONCTIONNEMENT   */
+  
+  @media screen and (min-width: 768px)  {
+    .section__title{
+      text-align: center;
+      padding-right:22px;
+    }
+  }
+  
+    .list_fonctionnement{
+      align-items: center;
+    }
+    .btn_choix{
+      width: 350px;
+      font-size: 20px;
+    }
+    
+  @media screen and (min-width: 768px)  {
+    .restaurant {
+      width: 100%;
+      margin-bottom: 0%;
+    }
+   
+    
+    }
