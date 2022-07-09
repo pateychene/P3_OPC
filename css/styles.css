@@ -144,7 +144,7 @@ a {
   opacity: 1;
   width: 218px;
   height: 45px;
-  margin: 2px 5px 24px 80px;
+  margin: 2px 5px 25px 50px;
   border: none;
   border-radius: 50px;
   font-size: 0.9em;
@@ -276,10 +276,10 @@ a {
   height: 70px;
   margin: 1.2em 2em 0 2em;
 }
-
-.btn_choix :hover {
-  cursor: pointer;
-  transform: scale(1.1);
+.btn_choix:hover {
+  background-color: #dfccf5;
+  box-shadow: 0px 7px 7px 0px #ddd8d8;
+  background-blend-mode: lighten;
 }
 
 .btn_numero {
@@ -445,6 +445,10 @@ a {
     flex-wrap: wrap;
   }
 }
+.restaurant--content i {
+  left: 88%;
+}
+
 /*  RESPONSIVE SECTION FONCTIONNEMENT   */
 @media screen and (min-width: 768px) {
   .section__title {
@@ -457,7 +461,7 @@ a {
 }
 
 .btn_choix {
-  width: 350px;
+  width: 280px;
   font-size: 20px;
 }
 
@@ -536,8 +540,8 @@ footer footer a {
   color: black;
   padding: 10px;
 }
-.resto_page img {
-  width: 230px;
+.resto_page .resto_header img {
+  width: 180px;
   padding-left: 30px;
 }
 
@@ -561,13 +565,13 @@ footer footer a {
   display: flex;
   flex-direction: initial;
   align-items: center;
-  padding-left: 5px;
+  padding-left: 45px;
 }
 
 .resto_name {
   font-family: "Shrikhand";
-  font-size: xx-large;
-  margin: 16px 4px 13px 2px;
+  font-size: x-large;
+  margin: 16px 0px 13px 0px;
 }
 
 .resto_heart {
@@ -592,7 +596,7 @@ footer footer a {
 .resto__element {
   border-radius: 10px;
   background-color: white;
-  width: 92%;
+  width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -603,37 +607,46 @@ footer footer a {
   animation-name: appear;
   transform: scale(0);
   animation-fill-mode: both;
-  height: 69px;
+  height: 70px;
+  cursor: pointer;
 }
 
 .resto__check {
-  height: 74%;
-  right: 0px;
-  top: 0;
-  width: 0px;
-  background: #99E2D0;
+  width: 30px;
+  background-color: #99E2D0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+  transition-duration: 1.2s;
   overflow: hidden;
-  transition: all 1.3s ease;
+}
+.resto__check:hover {
+  width: 30px;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  transform: rotate(0);
+}
+
+.resto__icon {
+  color: #99E2D0;
+  transform: 1.2s ease-in-out;
+  background-color: white;
+  border-radius: 100px;
 }
 
 .resto__contents {
   display: flex;
 }
 .resto__contents:hover .resto__check {
-  width: 40px;
+  width: 15px;
   border-radius: 0px 10px 10px 0px;
   cursor: pointer;
-}
-.resto__contents:hover .resto__contents__left {
-  width: calc(100% - 40px);
+  transform: rotate(0);
 }
 .resto__contents__title {
   font-weight: 800;
   margin: 0;
-  font-size: large;
 }
 .resto__contents__left {
   width: 100%;
@@ -641,20 +654,34 @@ footer footer a {
   position: relative;
   box-sizing: border-box;
 }
+.resto__contents__right {
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1.2s;
+  width: 0px;
+  height: 70px;
+}
+.resto__contents:hover .resto__contents__right {
+  width: 60px;
+  height: 70px;
+  border-radius: 0px 10px 10px 0px;
+}
 .resto__contents__inline {
   display: flex;
   padding-top: 0px;
-  font-size: medium;
+  font-size: small;
 }
 .resto__contents__inline__subtitle {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 82%;
+  width: 200px;
 }
 .resto__contents__inline__price {
   position: absolute;
-  right: 5%;
+  right: 4%;
 }
 
 /* RESPONSIVE PAGE RESTO-CARD */
@@ -665,6 +692,7 @@ footer footer a {
   }
   .resto .resto_head {
     justify-content: center;
+    margin-right: 8%;
   }
   .resto .resto__menu {
     width: 30%;
@@ -674,7 +702,7 @@ footer footer a {
     margin-right: auto;
   }
   .resto .resto__element {
-    width: 244px;
+    width: 255px;
   }
 
   .box {
@@ -687,23 +715,16 @@ footer footer a {
   }
 
   .resto_header img {
-    padding-left: 38%;
+    margin-left: 36%;
   }
 
   .resto__btn {
     margin: 0% 0% 2% 41%;
   }
 
-  .resto__contents__title {
-    font-size: smaller;
-  }
-
   .resto__contents__inline {
     font-size: small;
-  }
-
-  .resto__check {
-    height: 70px;
+    width: 145px;
   }
 }
 

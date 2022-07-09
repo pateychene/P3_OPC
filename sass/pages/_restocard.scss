@@ -17,11 +17,11 @@
     color: black;
     padding: 10px;
   }
-  img{
-    width: 230px;
+  .resto_header img{
+    width: 180px;
     padding-left:30px;
   } 
-  }
+}
   
   .resto_subheader img{
     width:100%;
@@ -44,12 +44,12 @@
     display: flex;
     flex-direction: initial;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 45px;
   }
   .resto_name{
     font-family:'Shrikhand';
-    font-size: xx-large;
-    margin: 16px 4px 13px 2px;
+    font-size: x-large;
+    margin: 16px 0px 13px 0px;
   
   }
   .resto_heart{
@@ -77,7 +77,7 @@
   .resto__element {
     border-radius: 10px;
     background-color: white;
-    width: 92%;
+    width: 300px;
     display: block;
     margin-left: auto; 
     margin-right: auto;
@@ -88,36 +88,47 @@
     animation-name: appear;
     transform: scale(0);
     animation-fill-mode: both;
-    height: 69px;
+    height: 70px;
+    cursor: pointer;
   }
-  .resto__check {
-    height: 74%;
-    right: 0px;
-    top: 0;
-    width: 0px;
-    background: #99E2D0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .resto__check { 
+    width: 30px;
+    background-color:$tertiary;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform: rotate(180deg);
+    transition-duration: 1.2s;
     overflow: hidden;
-    transition: all 1.3s ease;
-  }
   
+   &:hover{
+    width: 30px;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+     transform: rotate(0);
+  }
+}
+
+  .resto__icon{
+    color: $tertiary;
+    transform: 1.2s ease-in-out;
+    background-color:white;
+    border-radius: 100px;
+  }
+
   .resto__contents {
     display: flex;
     &:hover .resto__check {
-      width: 40px;
+      width: 15px;
       border-radius: 0px 10px 10px 0px;
       cursor: pointer;
+       transform: rotate(0);
     }
-    &:hover .resto__contents__left {
-      width: calc(100% - 40px);
-      
-    }
+    
     &__title {
       font-weight: 800;
       margin: 0;
-      font-size: large;
+      
     }
     &__left {
       width: 100%;
@@ -125,20 +136,37 @@
       position: relative;
       box-sizing: border-box;
     }
+    
+    &__right{
+      background-color:$tertiary;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition-duration: 1.2s;
+      width: 0px;
+      height: 70px;
+    }
+    
+    &:hover .resto__contents__right {
+      width: 60px;
+      height: 70px;
+      border-radius: 0px 10px 10px 0px;
+      
+    }
     &__inline {
       display: flex;
       padding-top: 0px;
-      font-size: medium;
+      font-size: small;
   
       &__subtitle {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 82%;
+        width: 200px;
       }
       &__price {
         position: absolute;
-        right: 5%;
+        right: 4%;
       }
     }
   }
@@ -151,6 +179,7 @@
       height: 499px;
       .resto_head{
         justify-content: center;
+        margin-right: 8%;
       }
       .resto__menu{
         width: 30%;
@@ -160,7 +189,7 @@
         }
       }
       .resto__element{
-        width: 244px;
+        width: 255px;
       }
     
     }
@@ -173,20 +202,15 @@
       height: 225px;
     }
     .resto_header img{
-      padding-left: 38%;
+      margin-left: 36%;
     }
   .resto__btn{
       margin: 0% 0% 2% 41%;
     }  
-  .resto__contents__title{
-    font-size: smaller;
   
-  
-  }
   .resto__contents__inline{
     font-size: small;
+    width: 145px;
   }
-  .resto__check{
-    height: 70px;
-  }
+
   }
