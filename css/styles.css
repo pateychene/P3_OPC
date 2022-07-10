@@ -277,15 +277,15 @@ a {
   height: 70px;
   margin: 1.2em 2em 0 2em;
 }
+
 .btn_choix:hover {
   background-color: #f2eafb;
   box-shadow: 0px 7px 7px 0px #ddd8d8;
   background-blend-mode: lighten;
   cursor: pointer;
 }
-.btn_choix .icon:hover {
-  cursor: pointer;
-  transform: scale(1.1);
+
+.btn_choix:hover span {
   color: #9356DC;
 }
 
