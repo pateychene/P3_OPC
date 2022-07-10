@@ -144,7 +144,7 @@ a {
   opacity: 1;
   width: 218px;
   height: 45px;
-  margin: 2px 5px 25px 50px;
+  margin: 2px 5px 25px 90px;
   border: none;
   border-radius: 50px;
   font-size: 0.9em;
@@ -265,6 +265,7 @@ a {
 }
 
 .btn_choix {
+  width: 86%;
   display: flex;
   align-items: center;
   background-color: #f4f4f4;
@@ -277,9 +278,15 @@ a {
   margin: 1.2em 2em 0 2em;
 }
 .btn_choix:hover {
-  background-color: #dfccf5;
+  background-color: #f2eafb;
   box-shadow: 0px 7px 7px 0px #ddd8d8;
   background-blend-mode: lighten;
+  cursor: pointer;
+}
+.btn_choix .icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #9356DC;
 }
 
 .btn_numero {
@@ -308,12 +315,6 @@ a {
 .btn_text {
   font-weight: 600;
   padding: 25px;
-}
-
-.icon:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  color: #9356DC;
 }
 
 .list--restaurant {
@@ -455,16 +456,16 @@ a {
     text-align: center;
     padding-right: 22px;
   }
-}
-.list_fonctionnement {
-  align-items: center;
-}
 
-.btn_choix {
-  width: 280px;
-  font-size: 20px;
-}
+  .list_fonctionnement {
+    align-items: center;
+  }
 
+  .btn_choix {
+    width: 36%;
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 768px) {
   .restaurant {
     width: 100%;
@@ -540,7 +541,8 @@ footer footer a {
   color: black;
   padding: 10px;
 }
-.resto_page .resto_header img {
+
+.resto_header img {
   width: 180px;
   padding-left: 30px;
 }
@@ -596,7 +598,7 @@ footer footer a {
 .resto__element {
   border-radius: 10px;
   background-color: white;
-  width: 300px;
+  width: 94%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -618,7 +620,7 @@ footer footer a {
   align-items: center;
   justify-content: center;
   transform: rotate(180deg);
-  transition-duration: 1.2s;
+  transition-duration: 0.5s;
   overflow: hidden;
 }
 .resto__check:hover {
@@ -630,7 +632,7 @@ footer footer a {
 
 .resto__icon {
   color: #99E2D0;
-  transform: 1.2s ease-in-out;
+  transform: 0.5s ease-in-out;
   background-color: white;
   border-radius: 100px;
 }
@@ -659,11 +661,12 @@ footer footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 1.2s;
+  transition-duration: 0.5s;
   width: 0px;
   height: 70px;
 }
 .resto__contents:hover .resto__contents__right {
+  cursor: pointer;
   width: 60px;
   height: 70px;
   border-radius: 0px 10px 10px 0px;
@@ -677,7 +680,6 @@ footer footer a {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 200px;
 }
 .resto__contents__inline__price {
   position: absolute;
@@ -688,26 +690,23 @@ footer footer a {
 @media (min-width: 768px) {
   .resto {
     margin: 10px 10px 10px 10px;
-    height: 499px;
   }
   .resto .resto_head {
     justify-content: center;
     margin-right: 8%;
-  }
-  .resto .resto__menu {
-    width: 30%;
   }
   .resto .resto__menu .resto__title {
     margin-left: auto;
     margin-right: auto;
   }
   .resto .resto__element {
-    width: 255px;
+    margin-right: 60px;
   }
 
   .box {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
   }
 
   .resto_subheader img {
@@ -715,16 +714,18 @@ footer footer a {
   }
 
   .resto_header img {
-    margin-left: 36%;
+    margin-left: 40%;
+    padding: 0;
   }
 
   .resto__btn {
-    margin: 0% 0% 2% 41%;
+    margin: 0% 0% 3% 40%;
   }
 
   .resto__contents__inline {
     font-size: small;
-    width: 145px;
+    overflow: hidden;
+    width: 80%;
   }
 }
 

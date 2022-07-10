@@ -12,7 +12,8 @@
     font-size: 22px;
   }
 
- .btn_choix {  
+ .btn_choix { 
+  width: 86%; 
   display: flex;
   align-items: center;
   background-color: #f4f4f4;
@@ -25,10 +26,16 @@
   margin: 1.2em 2em 0 2em;
   
   &:hover{
-      background-color:  lighten($primary,28%) ;
-      box-shadow: 0px 7px 7px 0px #ddd8d8;
-      background-blend-mode : lighten ;
+  background-color:  lighten($primary,35%) ;
+  box-shadow: 0px 7px 7px 0px #ddd8d8;
+  background-blend-mode : lighten ;
+  cursor: pointer;
   }
+  .icon:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  color: $primary;
+}
 }
 
   .btn_numero{
@@ -59,11 +66,7 @@
    padding: 25px;
   }
 
-.icon:hover{
-  cursor: pointer;
-      transform: scale(1.1);
-      color: $primary;
-}
+
 
 // SECTION RESTAURANT  //
 .list--restaurant{
@@ -215,16 +218,17 @@
     .section__title{
       text-align: center;
       padding-right:22px;
-    }
-  }
-  
+    } 
     .list_fonctionnement{
       align-items: center;
     }
     .btn_choix{
-      width: 280px;
+      width: 36%;
       font-size: 20px;
     }
+  }
+  
+   
     
   @media screen and (min-width: 768px)  {
     .restaurant {
