@@ -1,7 +1,7 @@
 /* PAGE DE RESTO-CARD */
 
 .box{
-    padding-bottom: 25px;
+    padding-bottom: 10px;
   }
   
   .resto_page{
@@ -19,7 +19,7 @@
   }
 }
   .resto_header img{
-    width: 180px;
+    width: 270px;
     padding-left: 30px;
   } 
 
@@ -30,6 +30,11 @@
     padding-top: 10px;
     height: 30vh;
     object-fit: cover;
+  }
+  .resto__menu{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
   }
   
   .resto_card{
@@ -45,11 +50,11 @@
     display: flex;
     flex-direction: initial;
     align-items: center;
-    padding-left: 45px;
+    
   }
   .resto_name{
     font-family:'Shrikhand';
-    font-size: x-large;
+    font-size: xx-large;
     margin: 16px 0px 13px 0px;
   
   }
@@ -64,7 +69,7 @@
     background-color: whitesmoke;
     position: relative;
     border-radius: 23px;
-    bottom: 49px;
+    bottom: 25px;
   
     &__menu {
       &__title {
@@ -159,6 +164,7 @@
       display: flex;
       padding-top: 0px;
       font-size: small;
+      width: calc(90%);
   
       &__subtitle {
         text-overflow: ellipsis;
@@ -204,11 +210,11 @@
       height: 225px;
     }
     .resto_header img{
-      margin-left: 40%;
+      margin-left: 34%;
       padding: 0;
     }
   .resto__btn{
-      margin: 0% 0% 3% 40%;
+      margin: 0% 0% 3% 41%;
     }  
   
   .resto__contents__inline{

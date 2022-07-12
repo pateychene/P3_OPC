@@ -1,5 +1,6 @@
 /* SECTION FONCTIONNEMENT */
 
+
 .list_fonctionnement{
     display:flex ; 
     flex-direction:column;
@@ -7,7 +8,7 @@
   }
 
   .section__title{
-    padding: 28px 0px 6px  26px;
+    padding: 28px 0px 30px  0px;
     font-weight: 800;
     font-size: 22px;
   }
@@ -23,7 +24,7 @@
   border-radius: 15px;
   font-size: 1em;
   height: 70px;
-  margin: 1.2em 2em 0 2em;
+  margin:10px 30px ;
  }
   .btn_choix:hover {
   background-color:  lighten($primary,35%) ;
@@ -216,13 +217,19 @@
     .section__title{
       text-align: center;
       padding-right:22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     } 
     .list_fonctionnement{
       align-items: center;
     }
     .btn_choix{
-      width: 36%;
+      width:calc(40%);
       font-size: 20px;
+    }
+    .btn_text{
+      padding: 90px;
     }
   }
   
@@ -233,6 +240,4 @@
       width: 100%;
       margin-bottom: 0%;
     }
-   
-    
     }

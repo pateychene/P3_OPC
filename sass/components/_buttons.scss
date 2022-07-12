@@ -28,9 +28,11 @@
   font-family: "Roboto-Black", sans-serif;
   background: linear-gradient(170deg,$primary,$secondary);
   opacity: 1;
-  width: 218px;
-  height: 45px;
-  margin:2px 5px 25px 90px ;
+  display: block;
+  width: 200px;
+  height: 38px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   border: none;
   border-radius: 50px;
   font-size: 0.9em;

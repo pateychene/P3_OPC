@@ -24,6 +24,16 @@ a {
   color: black;
 }
 
+.section__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+.section__title div {
+  margin-left: 30px;
+}
+
 /*--BOUTONS-- */
 /* ANIMATION COEUR */
 @keyframes fill {
@@ -142,9 +152,11 @@ a {
   font-family: "Roboto-Black", sans-serif;
   background: linear-gradient(170deg, #9356DC, #FF79DA);
   opacity: 1;
-  width: 218px;
-  height: 45px;
-  margin: 2px 5px 25px 90px;
+  display: block;
+  width: 200px;
+  height: 38px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   border: none;
   border-radius: 50px;
   font-size: 0.9em;
@@ -245,7 +257,7 @@ a {
 }
 .description__sub {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   margin: 0;
   width: 83%;
@@ -259,7 +271,7 @@ a {
 }
 
 .section__title {
-  padding: 28px 0px 6px 26px;
+  padding: 28px 0px 30px 0px;
   font-weight: 800;
   font-size: 22px;
 }
@@ -275,7 +287,7 @@ a {
   border-radius: 15px;
   font-size: 1em;
   height: 70px;
-  margin: 1.2em 2em 0 2em;
+  margin: 10px 30px;
 }
 
 .btn_choix:hover {
@@ -455,6 +467,9 @@ a {
   .section__title {
     text-align: center;
     padding-right: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .list_fonctionnement {
@@ -462,8 +477,12 @@ a {
   }
 
   .btn_choix {
-    width: 36%;
+    width: 40%;
     font-size: 20px;
+  }
+
+  .btn_text {
+    padding: 90px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -524,7 +543,7 @@ footer footer a {
 /* PAGE RESTO */
 /* PAGE DE RESTO-CARD */
 .box {
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 
 .resto_page {
@@ -543,7 +562,7 @@ footer footer a {
 }
 
 .resto_header img {
-  width: 180px;
+  width: 270px;
   padding-left: 30px;
 }
 
@@ -553,6 +572,12 @@ footer footer a {
   padding-top: 10px;
   height: 30vh;
   object-fit: cover;
+}
+
+.resto__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 .resto_card {
@@ -567,12 +592,11 @@ footer footer a {
   display: flex;
   flex-direction: initial;
   align-items: center;
-  padding-left: 45px;
 }
 
 .resto_name {
   font-family: "Shrikhand";
-  font-size: x-large;
+  font-size: xx-large;
   margin: 16px 0px 13px 0px;
 }
 
@@ -586,7 +610,7 @@ footer footer a {
   background-color: whitesmoke;
   position: relative;
   border-radius: 23px;
-  bottom: 49px;
+  bottom: 25px;
 }
 .resto__menu__title {
   margin: 24px 0px 8px 18px;
@@ -675,6 +699,7 @@ footer footer a {
   display: flex;
   padding-top: 0px;
   font-size: small;
+  width: 90%;
 }
 .resto__contents__inline__subtitle {
   text-overflow: ellipsis;
@@ -714,12 +739,12 @@ footer footer a {
   }
 
   .resto_header img {
-    margin-left: 40%;
+    margin-left: 34%;
     padding: 0;
   }
 
   .resto__btn {
-    margin: 0% 0% 3% 40%;
+    margin: 0% 0% 3% 41%;
   }
 
   .resto__contents__inline {
