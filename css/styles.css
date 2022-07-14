@@ -478,12 +478,8 @@ a {
   }
 
   .btn_choix {
-    width: 40%;
+    width: 28%;
     font-size: 20px;
-  }
-
-  .btn_text {
-    padding-left: 45px;
   }
 }
 @media screen and (min-width: 768px) {
