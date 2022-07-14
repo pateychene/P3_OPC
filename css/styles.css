@@ -483,7 +483,7 @@ a {
   }
 
   .btn_text {
-    padding: 90px;
+    padding-left: 45px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -597,8 +597,8 @@ footer footer a {
 
 .resto_name {
   font-family: "Shrikhand";
-  font-size: xx-large;
-  margin: 16px 0px 13px 0px;
+  font-size: x-large;
+  margin: 16px 4px 13px 6px;
 }
 
 .resto_heart {
